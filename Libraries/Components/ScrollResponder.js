@@ -199,6 +199,7 @@ var ScrollResponderMixin = {
    */
   scrollResponderHandleStartShouldSetResponderCapture: function(e: Event): boolean {
     // First see if we want to eat taps while the keyboard is up
+    return false
     var currentlyFocusedTextInput = TextInputState.currentlyFocusedField();
     var {keyboardShouldPersistTaps} = this.props;
     var keyboardNeverPersistTaps = !keyboardShouldPersistTaps ||
